@@ -1,0 +1,8 @@
+@import 'src/shared/styles/variables.module.scss';
+
+.inputWrapper {
+  .errorText {
+    color: $red;
+    padding-top: 5px;
+  }
+}

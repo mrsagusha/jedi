@@ -1,0 +1,30 @@
+@import 'src/shared/styles/variables.module.scss';
+@import 'src/shared/styles/mixins.module.scss';
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 25.5px;
+
+  .title {
+    @include footerTitle;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contacts {
+    padding-top: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contacts {
+    display: none;
+  }
+}
