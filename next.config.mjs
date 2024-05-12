@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: '/jedi',
   output: 'export',
   reactStrictMode: true,
 };
