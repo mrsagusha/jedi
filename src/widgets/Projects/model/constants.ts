@@ -26,7 +26,7 @@ const TABS_STYLES = {
 
 const TAB_STYLES = {
   '&.Mui-selected': {
-    color: `${colors.white} !important`,
+    color: `${colors.black} !important`,
   },
 };
 

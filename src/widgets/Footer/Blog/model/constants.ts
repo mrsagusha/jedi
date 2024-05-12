@@ -9,19 +9,19 @@ const ARROW_HEIGHT = 13;
 const BLOGS: BlogItem[] = [
   {
     id: 0,
-    image: '/images/footer/profile-1.png',
+    image: '/images/footer/profile-1.svg',
     date: '04/30/2014',
     title: 'Believe in the Business',
   },
   {
     id: 1,
-    image: '/images/footer/profile-2.png',
+    image: '/images/footer/profile-2.svg',
     date: '05/01/2014',
     title: 'Color solutions for the office',
   },
   {
     id: 2,
-    image: '/images/footer/profile-3.png',
+    image: '/images/footer/profile-3.svg',
     date: '04/28/2014',
     title: 'Anti-stress Joke Therapy',
   },
