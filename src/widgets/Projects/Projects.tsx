@@ -71,9 +71,9 @@ const Projects = (): ReactElement => {
         })}
       </Tabs>
       <Box className={classes.images}>
-        <Image src="/images/projects-1.png" width={IMAGE_WIDTH} height={IMAGE_HEIGHT} alt="girl with ballon" />
-        <Image src="/images/projects-2.png" width={IMAGE_WIDTH} height={IMAGE_HEIGHT} alt="girl with cup" />
-        <Image src="/images/projects-3.png" width={IMAGE_WIDTH} height={IMAGE_HEIGHT} alt="tablet" />
+        <Image src="/images/projects-1.svg" width={IMAGE_WIDTH} height={IMAGE_HEIGHT} alt="girl with ballon" />
+        <Image src="/images/projects-2.svg" width={IMAGE_WIDTH} height={IMAGE_HEIGHT} alt="girl with cup" />
+        <Image src="/images/projects-3.svg" width={IMAGE_WIDTH} height={IMAGE_HEIGHT} alt="tablet" />
       </Box>
     </Box>
   );
