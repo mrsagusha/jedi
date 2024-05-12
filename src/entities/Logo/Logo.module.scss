@@ -1,0 +1,26 @@
+.logo {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+
+  .logoTitle {
+    display: flex;
+    flex-direction: column;
+
+    .subTitle {
+      font-size: 0.875rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    flex-direction: column;
+    padding: 20px 0 34px 0;
+
+    .logoTitle {
+      align-items: center;
+      gap: 8px;
+    }
+  }
+}

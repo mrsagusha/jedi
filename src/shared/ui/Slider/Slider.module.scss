@@ -1,0 +1,44 @@
+.sliderWrapper {
+  position: relative;
+
+  .slider {
+    height: 612px;
+  }
+
+  .buttonsGroup {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: 0 auto;
+    z-index: 1;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .sliderWrapper {
+    .slider {
+      height: 482px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .sliderWrapper {
+    .slider {
+      height: 362px;
+    }
+  }
+}
+
+@media (max-width: 390px) {
+  .sliderWrapper {
+    .slider {
+      height: 184px;
+    }
+  }
+}

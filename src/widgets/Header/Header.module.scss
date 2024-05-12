@@ -1,0 +1,154 @@
+@import 'src/shared/styles/variables.module.scss';
+@import 'src/shared/styles/mixins.module.scss';
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 77px;
+
+  .burgerMenuWrapper,
+  .menu {
+    display: none;
+  }
+
+  .navigationTabs {
+    .tab {
+      @include tab;
+
+      color: $black;
+      font-weight: 700;
+      font-size: 0.813rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 0;
+
+    .burgerMenuWrapper {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      width: 100%;
+      padding: 9px 16px;
+      box-shadow: 0px 5px 2px -2px rgba(160,160,160,0.25);
+      z-index: 2;
+      background-color: $white;
+
+      .burgerTitle {
+        color: $blackDark;
+        font-size: 1.563rem;
+        padding-top: 1px;
+      }
+
+      .burgerWrapper {
+        position: relative;
+        width: 24px;
+        height: 24px;
+
+        .burgerMenu {
+          position: absolute;
+          right: 0;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          margin: auto;
+          width: 24px;
+          height: 4px;
+          border-radius: 3px;
+          background-color: $black;
+          cursor: pointer;
+  
+          &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            background-color: $black;
+            border-radius: 3px;
+            top: 7px;
+          }
+          &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            background-color: $black;
+            border-radius: 3px;
+            top: -7px;
+          }
+        }
+      }
+    }
+
+    .menu {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: $menuGray;
+      top: -262px;
+      animation: hideMenu .5s;
+    }
+
+    .menuVisible {
+      animation: showMenu .5s;
+      top: 62px;
+    }
+
+    .burgerTab {
+      position: relative;
+      align-items: flex-start;
+      color: $black;
+      font-weight: 700;
+      font-size: 0.813rem;
+      min-width: fit-content;
+      max-width: fit-content;
+      padding: 0 0 0 10px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        height: 2px;
+        background-color: $turquoise;
+        display: none;
+      }
+    }
+
+    .selected {
+      &::after {
+        display: block;
+      }
+    }
+  
+    .navigationTabs {
+      display: none;
+    }
+  }
+}
+
+@keyframes showMenu {
+  0% {
+    top: -262px;
+  }
+
+  100% {
+    top: 62px;
+  }
+}
+
+@keyframes hideMenu {
+  0% {
+    top: 62px;
+  }
+
+  100% {
+    top: -262px;
+  }
+}

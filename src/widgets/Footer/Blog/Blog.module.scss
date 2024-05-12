@@ -1,0 +1,56 @@
+@import 'src/shared/styles/variables.module.scss';
+@import 'src/shared/styles/mixins.module.scss';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  
+  .title {
+    @include footerTitle;
+  }
+
+  .blogs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .blog {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+
+      .blogInformation {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        .dateWrapper {
+          display: flex;
+          gap: 4px;
+          align-items: center;
+  
+          .date {
+            color: $lightGray;
+            font-size: 0.75rem;
+            letter-spacing: 0.3px;
+            line-height: 18px;
+          }
+        }
+  
+        .blogTitle {
+          color: $white;
+          font-size: 1.063rem;
+          letter-spacing: 0.3px;
+          line-height: 25.5px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    display: none;
+  }
+}

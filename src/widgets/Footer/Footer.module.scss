@@ -1,0 +1,134 @@
+@import 'src/shared/styles/variables.module.scss';
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+  background-color: $blackFooter;
+  padding: 24px 84px;
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .information {
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+  
+      .subTitle {
+        color: $lightGray;
+      }
+  
+      .contactInformation {
+        display: flex;
+        gap: 45px;
+  
+        .adress {
+          width: 150px;
+  
+          .title {
+            color: $white;
+            font-weight: 700;
+          }
+  
+          .information {
+            color: $lightGray;
+            text-decoration: none;
+          }
+        }
+  
+        .contacts {
+          display: flex;
+          flex-direction: column;
+          gap: 3px;
+  
+          .contact {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+
+            .title {
+              color: $white;
+              font-weight: 700;
+            }
+    
+            .information {
+              color: $lightGray;
+              text-decoration: none;
+            }
+  
+          }
+        }
+      }
+  
+      .socialLinks {
+        display: flex;
+        gap: 10px;
+        padding-top: 15px;
+      }
+    }
+  }
+
+  .privacy {
+    align-self: center;
+    color: $lightGray;
+    font-size: 0.875rem;
+
+    & > a {
+      color: $lightGray;
+      font-size: 0.875rem;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    .content {
+      .information {
+        .footerLogo {
+          padding: 24px 0 12px 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    align-items: center;
+
+   .content {
+    justify-content: center;
+    align-items: center;
+
+    .information {
+      .footerLogo {
+        padding: 24px 0 12px 0;
+      }
+
+      .contactInformation {
+        justify-content: center;
+        gap: 20px;
+
+        .adress {
+          text-align: center;
+        }
+
+        .contacts {
+          display: none;
+        }
+      }
+
+      .socialLinks {
+        display: none;
+      }
+    }
+   }
+  }
+
+  .privacy {
+    display: none;
+  }
+}
